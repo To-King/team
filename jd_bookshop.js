@@ -1,25 +1,22 @@
 /*
 口袋书店
-by@Wenmoux,thanks
-更新时间：2021-06-26 
-加了一个码,修复需要手动打开的问题
 活动入口：京东app首页-京东图书-右侧口袋书店
 已支持IOS双京东账号,Node.js支持N个京东账号
 脚本兼容: QuantumultX, Surge, Loon, JSBox, Node.js
 ============Quantumultx===============
 [task_local]
 #口袋书店
-1 8,12,18 * * * https://raw.githubusercontent.com/Wenmoux/scripts/wen/jd/chinnkarahoi_jd_bookshop.js, tag=口袋书店, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png, enabled=true
+1 8,12,18 * * * jd_bookshop.js, tag=口袋书店, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png, enabled=true
 
 ================Loon==============
 [Script]
-cron "1 8,12,18 * * *" script-path= https://raw.githubusercontent.com/Wenmoux/scripts/wen/jd/chinnkarahoi_jd_bookshop.js,tag=口袋书店
+cron "1 8,12,18 * * *" script-path=jd_bookshop.js,tag=口袋书店
 
 ===============Surge=================
-口袋书店 = type=cron,cronexp="1 8,12,18 * * *",wake-system=1,timeout=3600,script-path= https://raw.githubusercontent.com/Wenmoux/scripts/wen/jd/chinnkarahoi_jd_bookshop.js
+口袋书店 = type=cron,cronexp="1 8,12,18 * * *",wake-system=1,timeout=3600,script-path=jd_bookshop.js
 
 ============小火箭=========
-口袋书店 = type=cron,script-path= https://raw.githubusercontent.com/Wenmoux/scripts/wen/jd/chinnkarahoi_jd_bookshop.js, cronexpr="1 8,12,18* * *", timeout=3600, enable=true
+口袋书店 = type=cron,script-path=jd_bookshop.js, cronexpr="1 8,12,18 * * *", timeout=3600, enable=true
  */
 const $ = new Env('口袋书店');
 const notify = $.isNode() ? require('./sendNotify') : '';
@@ -102,7 +99,7 @@ async function jdBeauty() {
     console.log(`金币大于800，去抽奖`)
     while ($.gold >= 800) {
       await draw()
-      await $.wait(1000)
+      await $.wait(2000)
       $.gold -= 800
     }
   }
@@ -116,7 +113,7 @@ async function helpFriends() {
     if (!code) continue
     console.log(`去助力好友${code}`)
     await getActContent(true, code)
-    await $.wait(500)
+    await $.wait(2000)
   }
 }
 
@@ -305,7 +302,6 @@ function getActContent(info = false, shareUuid = '') {
         if (err) {
           console.log(`${$.name} API请求失败，请检查网路重试`)
         } else {
-   //     console.log(data)
           if (data && safeGet(data)) {
             data = JSON.parse(data);
             if (data.data) {
@@ -333,7 +329,7 @@ function getActContent(info = false, shareUuid = '') {
                       console.log(`去做${task.title}任务`)
                       for (let set of task.settings.filter(vo => vo.status === 0)) {
                         await doTask(set.type, set.value)
-                        await $.wait(500)
+                        await $.wait(2000)
                       }
                     }
                   } else if(task.title === '每日签到'){
@@ -343,13 +339,14 @@ function getActContent(info = false, shareUuid = '') {
                       for (let set of task.settings.filter(vo => vo.status === 0)) {
                         let res = await doTask(set.type, set.value)
                         if (res.result) break
-                        await $.wait(500)
+                        await $.wait(2000)
                       }
                     }
                   } else if (ADD_CART && ['加购商品'].includes(task.title)) {
                     if (task.okNum < task.dayMaxNum) {
                       console.log(`去做${task.title}任务`)
                       await doTask(task.settings[0].type, task.settings[0].value)
+                      await $.wait(2000)
                     }
                   }
                 }
@@ -695,17 +692,15 @@ function shareCodesFormat() {
     $.newShareCodes = [];
     if ($.shareCodesArr[$.index - 1]) {
       $.newShareCodes = $.shareCodesArr[$.index - 1].split('@');
-    }
-     else {
+    } else {
       console.log(`由于您第${$.index}个京东账号未提供shareCode,将采纳本脚本自带的助力码\n`)
       const tempIndex = $.index > inviteCodes.length ? (inviteCodes.length - 1) : ($.index - 1);
       $.newShareCodes = inviteCodes[tempIndex].split('@');
-     }
-    const readShareCodeRes = null // await readShareCode();
+    }
+    const readShareCodeRes = null //await readShareCode();
     if (readShareCodeRes && readShareCodeRes.code === 200) {
       $.newShareCodes = [...new Set([...$.newShareCodes, ...(readShareCodeRes.data || [])])];
     }
-    $.newShareCodes.map((item, index) => $.newShareCodes[index] = { "inviteCode": item, "shareDate": $.shareDate })
     console.log(`第${$.index}个京东账号将要助力的好友${JSON.stringify($.newShareCodes)}`)
     resolve();
   })
