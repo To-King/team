@@ -1,6 +1,6 @@
 /*
 点点券，可以兑换无门槛红包（1元，5元，10元，100元，部分红包需抢购）
-Last Modified time: 2021-07-23 10:27
+Last Modified time: 2021-05-28 17:27:14
 活动入口：京东APP-领券中心/券后9.9-领点点券 [活动地址](https://h5.m.jd.com/babelDiy/Zeus/41Lkp7DumXYCFmPYtU3LTcnTTXTX/index.html)
 脚本兼容: QuantumultX, Surge, Loon, JSBox, Node.js
 ===============Quantumultx===============
@@ -510,7 +510,7 @@ function getUA(){
 }
 function randomString(e) {
   e = e || 32;
-  let t = "abcdefhijkmnprstwxyz2345678", a = t.length, n = "";
+  let t = "abcdef0123456789", a = t.length, n = "";
   for (i = 0; i < e; i++)
     n += t.charAt(Math.floor(Math.random() * a));
   return n
