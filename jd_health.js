@@ -24,10 +24,12 @@ const jdCookieNode = $.isNode() ? require("./jdCookie.js") : "";
 const notify = $.isNode() ? require('./sendNotify') : "";
 let cookiesArr = [], cookie = "", allMessage = "", message;
 const inviteCodes = [
-  ``,
+  `T0225KkcRh9P9FbRKUygl_UJcgCjVfnoaW5kRrbA@T0159KUiH11Mq1bSKBoCjVfnoaW5kRrbA`,
+  `T0225KkcRh9P9FbRKUygl_UJcgCjVfnoaW5kRrbA@T0159KUiH11Mq1bSKBoCjVfnoaW5kRrbA`,
+  `T0225KkcRh9P9FbRKUygl_UJcgCjVfnoaW5kRrbA@T0159KUiH11Mq1bSKBoCjVfnoaW5kRrbA`,
 ]
 let reward = process.env.JD_HEALTH_REWARD_NAME ? process.env.JD_HEALTH_REWARD_NAME : ''
-const randomCount = $.isNode() ? 0 : 5;
+const randomCount = $.isNode() ? 20 : 5;
 if ($.isNode()) {
   Object.keys(jdCookieNode).forEach((item) => {
     cookiesArr.push(jdCookieNode[item]);
@@ -191,7 +193,7 @@ async function getCommodities() {
       try {
         if (safeGet(data)) {
           data = $.toObj(data)
-          let beans = data.data.result.jBeans.filter(x => x.status !== 0 && x.status !== 1)
+          let beans = data.data.result.jBeans.filter(x => x.status !== 1)
           if (beans.length !== 0) {
             for (let key of Object.keys(beans)) {
               let vo = beans[key]
@@ -321,16 +323,16 @@ function readShareCode() {
   console.log(`开始`)
   return new Promise(async resolve => {
     $.get({
-      url: `/`,
+      url: `http://share.turinglabs.net/api/v3/health/query/${randomCount}/`,
       'timeout': 10000
     }, (err, resp, data) => {
       try {
         if (err) {
-   //   console.log(`${JSON.stringify(err)}`)
-   //     console.log(`${$.name} health/read API请求失败，请检查网路重试`)
+          console.log(`${JSON.stringify(err)}`)
+          console.log(`${$.name} health/read API请求失败，请检查网路重试`)
         } else {
           if (data) {
-  //       console.log(`随机取${randomCount}个码放到您固定的互助码后面(不影响已有固定互助)`)
+            console.log(`随机取${randomCount}个码放到您固定的互助码后面(不影响已有固定互助)`)
             data = JSON.parse(data);
           }
         }
