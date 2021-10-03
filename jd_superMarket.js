@@ -78,8 +78,8 @@ let shareCodes = []
     })
 async function jdSuperMarket() {
   try {
-    await receiveGoldCoin();//收金币
-    await businessCircleActivity();//商圈活动
+    // await receiveGoldCoin();//收金币
+    // await businessCircleActivity();//商圈活动
     await receiveBlueCoin();//收蓝币（小费）
     // await receiveLimitProductBlueCoin();//收限时商品的蓝币
     await daySign();//每日签到
@@ -97,7 +97,7 @@ async function jdSuperMarket() {
     await receiveUserUpgradeBlue();
     await Home();
     if (helpAu === true) {
-   // await helpAuthor();
+      await helpAuthor();
     }
   } catch (e) {
     $.logErr(e)
