@@ -29,6 +29,7 @@ if ($.isNode()) {
         try{res = await getAuthorShareCode('https://gitee.com/star267/share-code/raw/master/decompression.json');}catch (e) {}
         if(!res){res = [];}
     }
+    res = [...res,...(await getAuthorShareCode('https://raw.githubusercontent.com/zero205/updateTeam/main/shareCodes/decompression.json') || [])]
     if(res.length > 0){
         $.shareUuid = getRandomArrayElements(res,1)[0];
     }
@@ -141,7 +142,7 @@ async function doTask(){
     }else{
         console.log(`已关注`);
     }
-    if(!$.activityData.addCartStatus){
+    if(!$.activityData.addCartStatus && ['card','car'].includes(process.env.FS_LEVEL)){
         console.log(`去执行加购`);
         $.taskType=21;
         await takePostRequest('saveTask');
