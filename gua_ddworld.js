@@ -25,8 +25,8 @@ message = ""
 let UA = ''
 $.hotFlag = false
 $.outFlag = false
-$.assistToken = 'T0225KkcRkoc91DVIx2hkfALcgCjRVmIaV5kRrbA'
-$.assistInviter = 'Jo250NiIScRn5f-7kseWcsdDu_qMbCRc3TYtNfsV9WY'
+$.assistToken = 'T010-6okSRsb8gCjRVmIaV5kRrbA'
+$.assistInviter = 'dZpPgtZq6WYq4wMHcRdXa0cV4l9fPG4KWPn-fDCEC-M'
 $.temp = [];
 !(async () => {
   if (!cookiesArr[0]) {
