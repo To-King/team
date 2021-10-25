@@ -72,7 +72,7 @@ let allMessage = '';
       AuthorizationInfo[$.UserName] = $.Authorization
     }
   }
-  let res = await getAuthorShareCode('https://raw.githubusercontent.com/Aaron-lv/updateTeam/master/shareCodes/ys.json')
+  let res = await getAuthorShareCode('https://raw.githubusercontent.com/ugg999999/Profiles/master/shareCodes/ys.json')
   if (!res) {
     $.http.get({url: 'https://purge.jsdelivr.net/gh/Aaron-lv/updateTeam@master/shareCodes/ys.json'}).then((resp) => {}).catch((e) => console.log('刷新CDN异常', e));
     await $.wait(1000)
@@ -286,7 +286,8 @@ function active(shareId = null, type = true) {
                 } else {
                   console.log(`\n抽奖次数：${num}，开始抽奖`)
                 }
-                for (let i = 0; i < num; i++) {
+                $.stop = false
+                for (let i = 0; i < num && !$.stop; i++) {
                   await lottery()
                   await $.wait(2000)
                 }
@@ -340,6 +341,7 @@ function lottery() {
             if (data.code === 200) {
               if (data.data) {
                 console.log(`抽奖成功：获得${data.data.awardVal}${data.data.awardName}`)
+                num = 0
               } else {
                 console.log(`抽奖成功：获得空气~`)
                 num++
