@@ -23,7 +23,7 @@ if ($.isNode()) {
   cookiesArr = [$.getdata('CookieJD'), $.getdata('CookieJD2'), ...jsonParse($.getdata('CookiesJD') || "[]").map(item => item.cookie)].filter(item => !!item);
 }
 !(async () => {
-  console.log(`\n【抢京豆脚本】优先账号内部互相助力，有剩余次数再助力【zero205】\n`)
+  console.log(`\n【抢京豆脚本】优先账号内部互相助力\n`)
   await getAuthorShareCode();
   if (!cookiesArr[0]) {
     $.msg($.name, '【提示】请先获取京东账号一cookie\n直接使用NobyDa的京东签到获取', 'https://bean.m.jd.com/bean/signIndex.action', { "open-url": "https://bean.m.jd.com/bean/signIndex.action" });
@@ -78,7 +78,7 @@ if ($.isNode()) {
       }
     }
   } else {
-    console.log(`\n账号少于3个，不够成团，去助力【zero205】，感谢！\n`)
+    console.log(`\n账号少于3个，不够成团，去助力，感谢！\n`)
     for (let j = 0; j < cookiesArr.length; j++) {
       if (cookiesArr[j]) {
         cookie = cookiesArr[j];
