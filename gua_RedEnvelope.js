@@ -3,7 +3,7 @@
 ck1助力 作者
 其余助力ck1
 https://u.jd.com/yI2EGVm
-https://u.jd.com/yI2EGVm?s=4McU1
+https://u.jd.com/yI2EGVm?s=PriH7
 跳转到app 可查看助力情况
 0 0,10,20,22 * * * gua_RedEnvelope.js
 
@@ -50,7 +50,7 @@ let nowTime = new Date().getTime() + new Date().getTimezoneOffset()*60*1000 + 8*
     return
   }
   console.log('整点跑 红包几率大点')
-  $.shareCode = '4McU1'
+  $.shareCode = 'PriH7'
   for (let i = 0; i < cookiesArr.length; i++) {
     cookie = cookiesArr[i];
     if (cookie) {
