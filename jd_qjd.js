@@ -4,6 +4,7 @@
  * 活动入口，京东APP首页，领京豆：https://h5.m.jd.com/rn/3MQXMdRUTeat9xqBSZDSCCAE9Eqz/index.html?has_native=0
  * 每个用户目前只能助力3次不同的用户。
  * 助力逻辑：优先账号内互助，再给我助力
+ cron 0 0,12,20 * * * 
  **/
 const $ = new Env('全民抢京豆');
 const notify = $.isNode() ? require('./sendNotify') : '';
@@ -23,7 +24,7 @@ if ($.isNode()) {
   cookiesArr = [$.getdata('CookieJD'), $.getdata('CookieJD2'), ...jsonParse($.getdata('CookiesJD') || "[]").map(item => item.cookie)].filter(item => !!item);
 }
 !(async () => {
-  console.log(`\n【抢京豆脚本】优先账号内部互相助力\n`)
+  console.log(`\n【抢京豆脚本】优先账号内部互相助力，有剩余次数再助力\n`)
   await getAuthorShareCode();
   if (!cookiesArr[0]) {
     $.msg($.name, '【提示】请先获取京东账号一cookie\n直接使用NobyDa的京东签到获取', 'https://bean.m.jd.com/bean/signIndex.action', { "open-url": "https://bean.m.jd.com/bean/signIndex.action" });
