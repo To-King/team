@@ -1641,11 +1641,11 @@ async function helpAuthor() {
   await bigWinner();//省钱大赢家
 }
 async function barGain() {
-  let res = await getAuthorShareCode2('https://raw.githubusercontent.com/Aaron-lv/updateTeam/master/shareCodes/jd_barGain.json')
+  let res = await getAuthorShareCode2('https://raw.githubusercontent.com/ugg999999/Profiles/master/shareCodes/jd_barGain.json.json')
   if (!res) {
     $.http.get({url: 'https://purge.jsdelivr.net/gh/Aaron-lv/updateTeam@master/shareCodes/jd_barGain.json'}).then((resp) => {}).catch((e) => $.log('刷新CDN异常', e));
     await $.wait(1000)
-    res = await getAuthorShareCode2('https://cdn.jsdelivr.net/gh/Aaron-lv/updateTeam@master/shareCodes/jd_barGain.json')
+    res = await getAuthorShareCode2('https://raw.fastgit.org/ugg999999/Profiles/master/shareCodes/jd_barGain.json.json')
   }
   $.inBargaining = [...(res && res['inBargaining'] || [])]
   $.inBargaining = getRandomArrayElements($.inBargaining, $.inBargaining.length > 3 ? 6 : $.inBargaining.length);
