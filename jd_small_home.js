@@ -81,7 +81,7 @@ const JD_API_HOST = 'https://lkyl.dianpusoft.cn/api';
   if (!$.inviteCodes) {
     $.http.get({url: 'https://purge.jsdelivr.net/gh/Aaron-lv/updateTeam@master/shareCodes/jd_updateSmallHomeInviteCode.json'}).then((resp) => {}).catch((e) => $.log('刷新CDN异常', e));
     await $.wait(1000)
-    $.inviteCodes = await getAuthorShareCode('https://cdn.jsdelivr.net/gh/Aaron-lv/updateTeam@master/shareCodes/jd_updateSmallHomeInviteCode.json')
+    $.inviteCodes = await getAuthorShareCode('https://raw.fastgit.org/ugg999999/Profiles/master/shareCodes/jd_updateSmallHomeInviteCode.json')
   }
   for (let i = 0; i < cookiesArr.length; i++) {
     if (cookiesArr[i]) {
