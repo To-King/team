@@ -32,9 +32,9 @@ let autoCode = '',projectId = '',helpId = '';
         return;
     }
     let res = [];
-    try{res = await getAuthorShareCode('https://raw.githubusercontent.com/lsh26/share_code/main/shop.json');}catch (e) {}
+    try{res = await getAuthorShareCode('https://raw.githubusercontent.com/ugg999999/Profiles/master/shareCodes/shop.json');}catch (e) {}
     if(!res){
-        try{res = await getAuthorShareCode('https://gitee.com/star267/share-code/raw/master/shop.json');}catch (e) {}
+        try{res = await getAuthorShareCode('https://raw.fastgit.org/ugg999999/Profiles/master/shareCodes/shop.json');}catch (e) {}
         if(!res){res = [];}
     }
     if(res.length > 0){
