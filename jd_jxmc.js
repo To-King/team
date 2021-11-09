@@ -107,7 +107,7 @@ if ($.isNode()) {
   if (!$.res) {
     $.http.get({url: 'https://purge.jsdelivr.net/gh/Aaron-lv/updateTeam@master/shareCodes/jxmc.json'}).then((resp) => {}).catch((e) => console.log('刷新CDN异常', e));
     await $.wait(1000)
-    $.res = await getAuthorShareCode('https://raw.githubusercontent.com/ugg999999/Profiles/master/shareCodes/jxmc.json')
+    $.res = await getAuthorShareCode('https://raw.fastgit.org/ugg999999/Profiles/master/shareCodes/jxmc.json')
   }
   await shareCodesFormat()
   for (let i = 0; i < cookiesArr.length; i++) {
