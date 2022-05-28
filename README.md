@@ -1,17 +1,15 @@
-# JDJB
-个人自用最全主库，集合可用脚本，适用于青龙面板。
+#  个人自用库
 
-频道：https://t.me/KingRan521
 
 拉库命令：
 
 国内鸡：
 
-ql repo https://ghproxy.com/github.com/KingRan/JDJB.git "jd_|jx_|jdCookie" "activity|backUp" "^jd[^_]|USER|utils|function|sign|sendNotify|ql|JDJR"
+ql repo https://ghproxy.com/github.com/"jd_|jx_|jdCookie" "activity|backUp" "^jd[^_]|USER|utils|function|sign|sendNotify|ql|JDJR"
 
 国外鸡：
 
-ql repo https://github.com/KingRan/JDJB.git "jd_|jx_|jdCookie" "activity|backUp" "^jd[^_]|USER|utils|function|sign|sendNotify|ql|JDJR"
+ql repo https://github.com/KingRan/ "jd_|jx_|jdCookie" "activity|backUp" "^jd[^_]|USER|utils|function|sign|sendNotify|ql|JDJR"
 
 1.出现这种错误：
 
