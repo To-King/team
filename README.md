@@ -5,11 +5,11 @@
 
 国内鸡：
 
-ql repo https://ghproxy.com/github.com/"jd_|jx_|jdCookie" "activity|backUp" "^jd[^_]|USER|utils|function|sign|sendNotify|ql|JDJR"
+ql repo https://github.com/xxx.git "jd_|jx_|jdCookie" "activity|backUp" "^jd[^_]|USER|utils|function|sign|sendNotify|ql|JDJR"
 
 国外鸡：
 
-ql repo https://github.com/KingRan/ "jd_|jx_|jdCookie" "activity|backUp" "^jd[^_]|USER|utils|function|sign|sendNotify|ql|JDJR"
+ql repo https://github.com/xxxxx/xxxx.git "jd_|jx_|jdCookie" "activity|backUp" "^jd[^_]|USER|utils|function|sign|sendNotify|ql|JDJR"
 
 1.出现这种错误：
 
