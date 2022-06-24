@@ -10,7 +10,14 @@ export yhypin="需要助力的pin值"
 export yhyactivityId="活动类型ID"
 export yhyauthorCode="活动ID"
 
-cron: 6 6 6 6 *
+例子：https://prodev.m.jd.com/mall/active/dVF7gQUVKyUcuSsVhuya5d2XD4F/index.html?code=16dde1860f1b4f1b9a93db6612abf0b9&invitePin=jd_12345
+
+正确的变量填写为：
+export yhypin="jd_12345"
+export yhyactivityId="dVF7gQUVKyUcuSsVhuya5d2XD4F"
+export yhyauthorCode="16dde1860f1b4f1b9a93db6612abf0b9"
+
+cron: 1 1 1 1 1 1
 new Env('邀请赢大礼');
 """
 
