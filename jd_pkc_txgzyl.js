@@ -21,11 +21,7 @@ boxjs订阅：https://git.metauniverse-cn.com/https://raw.githubusercontent.com/
 [rewrite_remote]
 https://git.metauniverse-cn.com/https://raw.githubusercontent.com/curtinlv/gd/main/dy/cx.conf, tag=订阅-Curtin, update-interval=172800, opt-parser=false, enabled=true
 
-[task_local]
-#获取body后执行
-10 10 * * * https://git.metauniverse-cn.com/https://raw.githubusercontent.com/curtinlv/gd/main/jk_script/pkc_txgzyl.js, tag=PKC-特效关注有礼, enabled=false
-
-cron: 1 1 1 1 1 1
+cron:7 7 7 7 *
 */
 const $ = new Env('PKC关注有礼-特效');
 let cookiesArr = [], cookie = '',  notify,  allMessage = '' ;

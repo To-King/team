@@ -17,7 +17,7 @@ export yhypin="jd_12345"
 export yhyactivityId="dVF7gQUVKyUcuSsVhuya5d2XD4F"
 export yhyauthorCode="16dde1860f1b4f1b9a93db6612abf0b9"
 
-cron: 1 1 1 1 1 1
+cron:7 7 7 7 *
 new Env('邀请赢大礼');
 """
 

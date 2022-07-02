@@ -1,9 +1,6 @@
 /**
- export M_FAV_SHOP_ARGV=""
- cron "1 1 1 1 1" jd_m_fav_shop_gift.js
-
-
-cron: 1 1 1 1 1 1
+export M_FAV_SHOP_ARGV=""
+cron:7 7 7 7 *
  */
 let mode = __dirname.includes('magic')
 const {Env} = mode ? require('./magic') : require('./magic')

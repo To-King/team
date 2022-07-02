@@ -8,9 +8,7 @@
 变量：
 //export jd_wxSecond_activityId="活动ID"
 
-cron: 1 1 1 1 1 1
-
-
+cron:7 7 7 7 *
 */
 
 const $ = new Env('读秒拼手速通用活动');

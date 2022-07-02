@@ -12,12 +12,7 @@
 ## 最小入会值 （默认10）
 //export OPENCARD_BEAN=""
 
-============Quantumultx===============
-[task_local]
-#入会开卡领取礼包(通用)
-1 1 1 1 1 1 jd_OpenCard_Force.js, tag=入会开卡领取礼包(通用), enabled=true
-
-
+cron:7 7 7 7 *
 */
 
 const $ = new Env('入会开卡领取礼包通用');

@@ -14,7 +14,7 @@
 活动网址：
 //https://lzkjdz-isv.isvjcloud.com/wxCartKoi/cartkoi/activity?activityId=xxxxxxx
 
-cron:1 1 1 1 1 1
+cron:7 7 7 7 *
 */
 
 const $ = new Env('购物车锦鲤通用活动');

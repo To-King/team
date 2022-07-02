@@ -8,9 +8,8 @@ https://raw.githubusercontent.com/msechen/jdrain/main/jd_share.js
 ownCookieNum 需要助力数量，默认4个
 SHARE_ACTIVITY_ID活动id
 
-cron: 1 1 1 1 1 1
 注意控制ck数量
-
+cron:7 7 7 7 *
 */
 const $ = new Env("LZ分享有礼");
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';

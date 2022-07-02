@@ -4,7 +4,7 @@ M幸运抽奖
 环境变量
 M_WX_LUCK_DRAW_URL  活动链接
 
-cron: 1 1 1 1 1 1
+cron:7 7 7 7 *
 
 */
 

@@ -1,5 +1,5 @@
 /*
-cron: 1 1 1 1 1 1
+cron:7 7 7 7 *
 */
 
 let mode = __dirname.includes('magic')

@@ -13,7 +13,7 @@ TG: https://t.me/HarbourToulu
 2022年5月8日由https://github.com/insoxin/解密
 解密附言:下列js中的如果有非京东官方服务器绝对不是我的,原作就有,不承担任何责任,有能力者可自行解密对验
 
-cron: 1 1 1 1 1 1
+cron:7 7 7 7 *
 */
 
 let jd_cjhy_activityId = "" // 活动ID

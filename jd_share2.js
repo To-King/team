@@ -8,11 +8,7 @@ jd_fxyl_activityId  活动ID 必需
 OWN_COOKIE_NUM  需要被助力的人数
 HELP_COOKIE_NUM 助力的人数
 
-cron: 1 1 1 1 1 1
-============Quantumultx===============
-[task_local]
-#LZ分享有礼
-1 1 1 1 * jd_share.js, tag=LZ分享有礼, enabled=true
+cron:7 7 7 7 *
 
 */
 const $ = new Env("LZ分享有礼");

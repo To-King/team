@@ -1,7 +1,7 @@
 /**
 * 测试集合青蛙和KR的修改适配
 
-cron: 1 1 1 1 1 1
+cron:7 7 7 7 *
 */
 const $ = new Env('测试开卡');
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';

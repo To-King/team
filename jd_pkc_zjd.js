@@ -34,12 +34,7 @@ api.m.jd.com
 ^https?://api\.m\.jd\.com/api\?functionId=vvipclub_distributeBean_assist url script-request-body https://gitee.com/curtinlv/Curtin/raw/master/Script/c_zjd_help.js
 ^https?://api\.m\.jd\.com/api\?functionId=distributeBeanActivityInfo url script-response-body https://gitee.com/curtinlv/Curtin/raw/master/Script/c_zjd_help.js
 
-[task_local]
-#获取body后执行
-10 10 * * * https://gitee.com/curtinlv/Curtin/raw/master/Script/c_zjd_help.js, tag=微信小程序赚京豆-瓜分京豆, enabled=true
-
-
-cron: 1 1 1 1 1 1
+cron:7 7 7 7 *
 */
 const $ = new Env('赚喜豆-内部助力');
 let cookiesArr = [], cookie = '',  notify,  allMessage = '' ;

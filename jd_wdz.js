@@ -7,7 +7,7 @@
  * @param num 跑多少ck
  * @param againUserIndex 需要重新跑的ck
  * @returns {Promise<unknown>}
-cron: 1 1 1 1 1 1
+cron:7 7 7 7 *
  */
 
 function openCardActivity(activityId, activityUrl, pin, num, againUserIndex) {

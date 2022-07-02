@@ -28,10 +28,7 @@
 注意：第一个CK黑号会全部助力所填写的助力码
 
 
-============Quantumultx===============
-[task_local]
-#大牌联合通用开卡
-1 1 1 1 * jd_opencardDPLHTY.js, tag=大牌联合通用开卡, enabled=true
+cron:7 7 7 7 *
 */
 let opencard_toShop = "false"
 const $ = new Env("大牌联合通用开卡");

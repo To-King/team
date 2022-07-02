@@ -11,7 +11,7 @@
 活动网址：
 //https://lzkjdz-isv.isvjcloud.com/wxCollectCard/activity/activity?activityId=xxxxxxx
 
-cron: 1 1 1 1 1 1
+cron:7 7 7 7 *
 
 */
 

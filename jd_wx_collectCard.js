@@ -1,6 +1,6 @@
 /*
 //问题反馈:https://t.me/Wall_E_Channel
-cron: 1 1 1 1 1 1
+cron:7 7 7 7 *
 */
 
 let mode = __dirname.includes('magic')
