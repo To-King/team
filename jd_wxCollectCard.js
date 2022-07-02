@@ -12,10 +12,6 @@
 //https://lzkjdz-isv.isvjcloud.com/wxCollectCard/activity/activity?activityId=xxxxxxx
 
 cron: 1 1 1 1 1 1
-============Quantumultx===============
-[task_local]
-#集卡抽奖通用活动
-1 1 1 1 * jd_wxCollectCard.js, tag=集卡抽奖通用活动, enabled=true
 
 */
 

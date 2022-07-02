@@ -12,11 +12,9 @@ https://lzkj-isv.isvjcloud.com/drawCenter/activity/8530275?activityId=xxxxxx
 ============Quantumultx===============
 [task_local]
 #LZ刮刮乐抽奖通用活动
-31 1 1 1 1 https://raw.githubusercontent.com/KingRan/KR/main/jd_drawCenter.js, tag=LZ刮刮乐抽奖通用活动, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png, enabled=true
+1 1 1 1 1 https://raw.githubusercontent.com/KingRan/KR/main/jd_drawCenter.js, tag=LZ刮刮乐抽奖通用活动, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png, enabled=true
 
-================Loon==============
-[Script]
-cron "31 1 1 1 1" script-path=https://raw.githubusercontent.com/KingRan/KR/main/jd_drawCenter.js,tag=LZ刮刮乐抽奖通用活动
+
 
 ===============Surge=================
 LZ刮刮乐抽奖通用活动 = type=cron,cronexp="31 1 1 1 1",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/KingRan/KR/main/jd_drawCenter.js

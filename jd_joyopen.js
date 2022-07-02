@@ -8,9 +8,6 @@ JOY通用开卡活动
 日志显示已入会，才代表奖励已经领取
 
 cron: 1 1 1 1 1 1
-============Quantumultx===============
-[task_local]
-2 1 * * * jd_joyopen.js, tag=JOY通用开卡活动, enabled=true
 
 */
 

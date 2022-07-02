@@ -10,11 +10,8 @@
 活动网址：
 //https://lzkjdz-isv.isvjcloud.com/wxFansInterActionActivity/activity/activity?activityId=xxxxxxx
 
-cron:6 6 6 6 *
-============Quantumultx===============
-[task_local]
-#粉丝互动通用活动
-6 6 6 6 * jd_wxFansInterActionActivity.js, tag=粉丝互动通用活动, enabled=true
+cron:1 1 1 1 1 1
+
 
 */
 const $ = new Env('粉丝互动通用活动-加密');

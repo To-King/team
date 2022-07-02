@@ -9,10 +9,7 @@
 //export jd_wxSecond_activityId="活动ID"
 
 cron: 1 1 1 1 1 1
-============Quantumultx===============
-[task_local]
-#读秒拼手速通用活动
-1 1 1 1 * jd_wxSecond.js, tag=读秒拼手速通用活动, enabled=true
+
 
 */
 

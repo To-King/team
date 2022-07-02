@@ -15,11 +15,6 @@
 //https://lzkjdz-isv.isvjcloud.com/wxCartKoi/cartkoi/activity?activityId=xxxxxxx
 
 cron:1 1 1 1 1
-============Quantumultx===============
-[task_local]
-#购物车锦鲤通用活动
-1 1 1 1 * jd_wxCartKoi.js, tag=购物车锦鲤通用活动, enabled=true
-
 */
 
 const $ = new Env('购物车锦鲤通用活动');
