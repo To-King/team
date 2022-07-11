@@ -5,11 +5,13 @@ File: jd_inviteFriendsGift.py(邀好友赢大礼)
 Author: Fix by HarbourJ from doubi
 Date: 2022/7/6 23:26
 TG: https://t.me/HarbourToulu
-cron: 1 1 1 1 1 1
+
 new Env('邀好友赢大礼');
 活动入口：https://prodev.m.jd.com/mall/active/dVF7gQUVKyUcuSsVhuya5d2XD4F/index.html?code=xxxxxxxx&invitePin=xxxxxx
 修改记录: 增加从环境变量中获取authorCode变量，增加对青龙desi JD_COOKIE的适配。
 变量格式: export jd_inv_authorCode="6b84e047a9154d909febd19d3120aad2"
+
+cron: 7 7 7 7 *
 """
 
 import json
