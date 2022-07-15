@@ -1,4 +1,5 @@
 /*
+
 const $=new Env('LZ组队瓜分京豆')
 一共有2个变量
 jd_zdjr_activityId  活动ID 必需
