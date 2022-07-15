@@ -1,5 +1,5 @@
 /*
-更新时间：2022-4-11
+更新时间：2022-7-12
 皮卡车
 
 # 变量
@@ -369,8 +369,13 @@ async function getMyPing(timeout = 500) {
                          $.log(`${JSON.stringify(err)}`);
                      }else {
                          $.data = JSON.parse(data);
+                         rep_cookies = resp.headers['set-cookie'];
                          // console.log(JSON.stringify($.data,null, '\t'));
-                          if($.data.result){
+                         r_cookie='';
+                         for(var c in rep_cookies){
+                             r_cookie += rep_cookies[c].split(" ")[0];
+                         }
+                         if($.data.result){
                               username=$.data.data.nickname;
                               pin=encodeURIComponent($.data.data.secretPin);
 
