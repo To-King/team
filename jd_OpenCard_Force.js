@@ -13,6 +13,12 @@
 //export OPENCARD_BEAN=""
 
 cron:7 7 7 7 *
+============Quantumultx===============
+[task_local]
+#入会开卡领取礼包(通用)
+1 1 1 1 * jd_OpenCard_Force.js, tag=入会开卡领取礼包(通用), enabled=true
+
+
 */
 
 const $ = new Env('入会开卡领取礼包通用');
@@ -53,7 +59,7 @@ message = '';
       $.index = i + 1;
       message = '';
       $.nickName = '';
-      await TotalBean();
+      //await TotalBean();
       $.UserName = $.nickName || $.UserName;
       console.log(`\n******开始【京东账号${$.index}】${$.UserName}*********\n`);
       await getUA()
