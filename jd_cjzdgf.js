@@ -4,11 +4,11 @@
 jd_cjhy_activityId  活动ID 必需
 jd_cjhy_activityUrl 活动地址 必需
 
-cron:10 10 10 10 *
+
 ============Quantumultx===============
 [task_local]
 #CJ组队瓜分京豆
-1 1 1 1 * jd_cjzdgf.js, tag=CJ组队瓜分京豆, enabled=true
+10 10 10 10 * jd_cjzdgf.js, tag=CJ组队瓜分京豆, enabled=true
 
 */
 
