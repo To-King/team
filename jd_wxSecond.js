@@ -10,11 +10,11 @@
 变量：
 //export jd_wxSecond_activityId="活动ID"
 
-cron:10 10 10 10 *
+
 ============Quantumultx===============
 [task_local]
 #读秒拼手速通用活动
-1 1 1 1 * jd_wxSecond.js, tag=读秒拼手速通用活动, enabled=true
+10 10 10 10 * jd_wxSecond.js, tag=读秒拼手速通用活动, enabled=true
 
 */
 
