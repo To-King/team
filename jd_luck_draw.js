@@ -16,11 +16,11 @@
 
 //export LUCK_DRAW_OPENCARD="true"  不填写不会加入店铺会员  
 
-cron:10 10 10 10 *
+
 ============Quantumultx===============
 [task_local]
 #幸运抽奖通用活动-加密
-1 1 1 1 * jd_luck_draw.js, tag=幸运抽奖通用活动-加密, enabled=true
+10 10 10 10 * jd_luck_draw.js, tag=幸运抽奖通用活动-加密, enabled=true
 */
 
 const $ = new Env("幸运抽奖通用活动-加密");
