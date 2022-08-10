@@ -16,11 +16,11 @@ mitm
 *-isv.isvjcloud.com
 [task_local]
 组队瓜分京豆
-40 11 * * * jd_zdjr.js, tag=组队瓜分京豆, enabled=true
+10 10 10 10 * jd_zdjr.js, tag=组队瓜分京豆, enabled=true
 ================Loon==============
 [Script]
-cron "40 11 * * *" script-path=jd_zdjr.js,tag=组队瓜分京豆
-cron:10 10 10 10 *
+10 10 10 10 * script-path=jd_zdjr.js,tag=组队瓜分京豆
+
 */
 
 let jd_zdjr_activityId = ''// 活动ID
