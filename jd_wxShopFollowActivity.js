@@ -8,12 +8,12 @@ LZ关注抽奖通用活动
 变量：
 //export jd_wxShopFollowActivity_activityId="活动ID"
 
-cron:1 1 1 1 *
+
 ============Quantumultx===============
 [task_local]
 #LZ关注抽奖通用活动
-1 1 1 1 * jd_wxShopFollowActivity.js, tag=LZ关注抽奖通用活动, enabled=true
-cron:10 10 10 10 *
+10 10 10 10 * jd_wxShopFollowActivity.js, tag=LZ关注抽奖通用活动, enabled=true
+
 */
 
 const $ = new Env('LZ关注抽奖通用活动');
