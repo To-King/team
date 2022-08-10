@@ -14,8 +14,8 @@ LZ让福袋飞通用活动
 ============Quantumultx===============
 [task_local]
 #LZ让福袋飞通用活动
-6 6 6 6 * jd_wxUnPackingActivity.js, tag=LZ让福袋飞通用活动, enabled=true
-cron:10 10 10 10 *
+10 10 10 10 * jd_wxUnPackingActivity.js, tag=LZ让福袋飞通用活动, enabled=true
+
 */
 
 const $ = new Env('LZ让福袋飞');
