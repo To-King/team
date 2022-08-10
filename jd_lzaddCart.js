@@ -12,11 +12,11 @@
 
 //export JD_CART="true" // 清空购物变量
 
-cron:10 10 10 10 *
+
 ============Quantumultx===============
 [task_local]
 #LZ加购有礼通用活动
-1 1 1 1 * jd_lzaddCart.js, tag=LZ加购有礼通用活动, enabled=true
+10 10 10 10 * jd_lzaddCart.js, tag=LZ加购有礼通用活动, enabled=true
 */
 
 const $ = new Env('LZ加购有礼通用活动');
