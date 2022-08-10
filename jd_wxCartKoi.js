@@ -14,11 +14,11 @@
 活动网址：
 //https://lzkjdz-isv.isvjcloud.com/wxCartKoi/cartkoi/activity?activityId=xxxxxxx
 
-cron:10 10 10 10 *
+
 ============Quantumultx===============
 [task_local]
 #购物车锦鲤通用活动
-1 1 1 1 * jd_wxCartKoi.js, tag=购物车锦鲤通用活动, enabled=true
+10 10 10 10 * jd_wxCartKoi.js, tag=购物车锦鲤通用活动, enabled=true
 
 */
 
