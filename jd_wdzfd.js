@@ -30,11 +30,11 @@ PS：jd_wdz_maxnum必须大于jd_wdz_mixnum  才能生效  不填写默认运行
 //export jd_wdzfd_activityId="活动ID"
 //export jd_wdzfd_activityUrl="https://cjhydz-isv.isvjcloud.com"
 
-cron:10 10 10 10 *
+
 ============Quantumultx===============
 [task_local]
 #微定制瓜分福袋-加密
-7 7 7 7 * jd_wdzfd.js, tag=微定制瓜分福袋-加密, enabled=true
+10 10 10 10 * jd_wdzfd.js, tag=微定制瓜分福袋-加密, enabled=true
 */
 
 let jd_wdzfd_activityId="" // 活动ID
