@@ -4,12 +4,14 @@ M幸运抽奖
 环境变量
 M_WX_LUCK_DRAW_URL  活动链接
 
-cron:7 7 7 7 *
 
+[task_local]
+#M幸运抽奖
+10 10 10 10 * jd_wx_luckDraw.js, tag=M幸运抽奖, enabled=true
 */
 
-let mode = __dirname.includes('/home/magic/Work/wools/magic/raw')
-const {Env} = mode ? require('../magic') : require('./magic')
+let mode = __dirname.includes('magic')
+const {Env} = mode ? require('./magic') : require('./magic')
 const $ = new Env('M幸运抽奖');
 $.whitelist = process.env.M_WX_WHITELIST
     ? process.env.M_WX_WHITELIST
