@@ -11,7 +11,7 @@ SHARE_ACTIVITY_ID活动id
 注意控制ck数量
 cron:7 7 7 7 *
 */
-const $ = new Env("LZ分享有礼");
+const $ = new Env("LZ分享有礼2");
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
 const notify = $.isNode() ? require('./sendNotify') : '';
 let cookiesArr = [], cookie = '', message = '';
