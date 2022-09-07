@@ -16,7 +16,7 @@ cron:10 10 10 10 *
 ============Quantumultx===============
 [task_local]
 #加购有礼通用-加密
-8 8 8 8 * jd_wxCollectionActivity.js, tag=加购有礼通用-加密, enabled=true
+10 10 10 10 * jd_wxCollectionActivity.js, tag=加购有礼通用-加密, enabled=true
 
 */
 
