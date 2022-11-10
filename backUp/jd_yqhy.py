@@ -10,14 +10,7 @@ export yhypin="需要助力的pin值"
 export yhyactivityId="活动类型ID"
 export yhyauthorCode="活动ID"
 
-例子：https://prodev.m.jd.com/mall/active/dVF7gQUVKyUcuSsVhuya5d2XD4F/index.html?code=16dde1860f1b4f1b9a93db6612abf0b9&invitePin=jd_12345
-
-正确的变量填写为：
-export yhypin="jd_12345"
-export yhyactivityId="dVF7gQUVKyUcuSsVhuya5d2XD4F"
-export yhyauthorCode="16dde1860f1b4f1b9a93db6612abf0b9"
-
-cron:7 7 7 7 *
+cron:10 10 10 10 *
 new Env('邀请赢大礼');
 """
 
@@ -101,7 +94,7 @@ async def plogin(ua,cookie):
         'Referer': 'https://prodev.m.jd.com/',
         'User-Agent':ua
     }
-    response = requests.get(url=url,headers=header,timeout=5).text
+    response = requests.get(url=url,headers=header,timeout=30).text
     return response
 
 # 活动接口
