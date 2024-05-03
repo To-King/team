@@ -1,37 +1,18 @@
 {
     "name": "elecV2P 重写订阅",
     "type": "rewrite",
-    "note": "该订阅目前仅适用于 elecV2P。更多说明请查看: https://github.com/elecV2/elecV2P-dei/tree/master/docs/05-rewrite.md",
+    "note": "该订阅目前仅适用于 elecV2P",
     "author": "https://t.me/elecV2",
-    "resource": "https://raw.githubusercontent.com/elecV2/elecV2P/master/efss/rewritesub.json",
+    "resource": "https://raw.githubusercontent.com/To-King/team/master/rewritesub.json",
     "mitmhost": [
-      "test.com", "httpbin.org"
+      "air.tb.ele.me"
     ],
     "rewrite": [
       {
-        "match": "^https?:\\/\\/test\\.com\\/block",
+        "match": "^https?:\\/\\/air\\.tb\\.ele\\.me\\/app\\/conch-page\\/svip-new-exchange-coupons\\/index\\.\\html",
         "stage": "req",
-        "target": "reject-json",
+        "target": "https://raw.githubusercontent.com/To-King/team/master/elm/elm.js",
         "enable": true
-      },
-      {
-        "match": "https:\\/\\/httpbin\\.org",
-        "stage": "res",
-        "target": "https://raw.githubusercontent.com/elecV2/elecV2P/master/script/JSFile/exam-cheerio.js"
       }
-    ],
-    "task": {
-      "type": "skip",
-      "list": [
-        {
-          "name": "通过 REWRITE 订阅添加的任务",
-          "type": "cron",
-          "time": "30 0 0 * * *",
-          "job": {
-            "type": "runjs",
-            "target": "https://raw.githubusercontent.com/elecV2/elecV2P/master/script/JSFile/test.js"
-          }
-        }
-      ]
-    }
+    ]
   }
